@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-poppins: 'Poppins', sans-serif;
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-poppins-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins);
+  background: linear-gradient(90deg, #ffffff, #b8d2e9, #66b1f3);
+  background-size: 200% 200%;
+  animation: moveBg 6s linear infinite;
 }
+
+@keyframes moveBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.custom-counter {
+  counter-reset: item;
+  list-style: none;
+}
+
+.custom-counter li {
+  counter-increment: item;
+  position: relative;
+}
+
+.custom-counter li::before {
+  content: counter(item);
+  font-size: 110px;
+  font-weight: bold;
+  position: absolute;
+  left: -5rem;
+  top: -2.25rem;
+  color: rgb(204, 204, 204);
+}
+
