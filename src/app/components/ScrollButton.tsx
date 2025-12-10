@@ -14,7 +14,7 @@ export default function ScrollButton({ nextId }: ScrollButtonProps) {
     <button
         type="button"
         onClick={() => scrollToNext(nextId)}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-blue-400/50 text-3xl animate-bounce py-2 hover:cursor-pointer hidden lg:inline-block"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 text-blue-400/50 text-3xl animate-bounce py-2 hover:cursor-pointer hidden lg:inline-block"
     >
       ↓
     </button>
