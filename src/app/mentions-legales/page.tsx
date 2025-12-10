@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export default function MentionsLegales() {
     return (
-        <main className="max-w-[1210px] m-auto border-dashed border-l border-r p-2 lg:p-4 border-x-slate-300">
+        <main className="w-full m-auto border-dashed border-l border-r p-2 lg:p-4 border-x-slate-300">
             <Header></Header>
             <h2 className="text-2xl text-center mb-8">Mentions légales</h2>
             <section className="max-w-[600px] flex flex-col justify-center  mb-8 mx-auto">
