@@ -37,7 +37,7 @@ export default function Home() {
           <ScrollButton nextId="contact" />
         </div>
         
-        <section id="contact" className="text-center min-h-[650px] flex flex-col justify-center items-center mb-20 rounded-3xl relative z-0">
+        <section id="contact" className="text-center min-h-[650px] flex flex-col justify-center items-center mb-20 rounded-3xl relative z-0 overflow-hidden">
           <div className="absolute w-280 h-280 rounded-full border-b-3 -translate-y-70 border-b-blue-500 blur-sm -z-1"></div>
           <h2 className="text-3xl md:text-4xl mb-6">Votre projet <span className="md:hidden"><br /></span> <span className="font-semibold gradient-text">commence ici...</span></h2>
           <Form />
