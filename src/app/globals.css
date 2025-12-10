@@ -143,3 +143,9 @@ h2 {
 .slide-2 {
   transform: translateX(-200%);
 }
+
+@media screen and (min-width: 1440px) {
+  .hero-m {
+    margin: auto;
+  }
+}

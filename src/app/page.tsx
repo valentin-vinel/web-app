@@ -14,25 +14,25 @@ export default function Home() {
 
   return (
     <div>
-      <main className="max-w-[1210px] m-auto border-dashed border-l border-r p-2 lg:p-4 border-x-slate-300">
+      <main className="w-full m-auto border-dashed border-l border-r p-2 lg:p-4 border-x-slate-300">
         <div className="lg:h-screen flex flex-col relative mb-20 lg:mb-0">
           <Header />
           <HeroSection />
           <ScrollButton nextId="systeme" />
         </div>
 
-        <div className="relative lg:h-screen flex flex-col mb-20 lg:mb-0">
+        <div className="relative lg:h-screen flex flex-col mb-20 lg:mb-0 max-w-[1200px] m-auto">
           <SystemSection />
           <ScrollButton nextId="process" />
         </div>
         {/* <ResultsSection /> */}
 
-        <div className="relative lg:h-screen flex flex-col mb-20 lg:mb-0">
+        <div className="relative lg:h-screen flex flex-col mb-20 lg:mb-0 max-w-[1200px] m-auto">
           <ProcessusSection />
           <ScrollButton nextId="projets" />
         </div>
 
-        <div className="relative lg:h-screen flex flex-col mb-20 lg:mb-0">
+        <div className="relative lg:h-screen flex flex-col mb-20 lg:mb-0 max-w-[1200px] m-auto">
           <ProjetsSection />
           <ScrollButton nextId="contact" />
         </div>
