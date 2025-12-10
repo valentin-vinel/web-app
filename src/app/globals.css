@@ -24,15 +24,16 @@ html {
 
 body {
   font-family: var(--font-poppins);
-  background: linear-gradient(90deg, #ffffff, #b8d2e9, #66b1f3);
-  background-size: 200% 200%;
-  animation: moveBg 6s linear infinite;
+  font-weight: 300;
+  color: rgb(56, 56, 56);
 }
 
-@keyframes moveBg {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.header-bg {
+  background: linear-gradient(90deg, #004ad4, #14b9b1);
+}
+
+h2 {
+  font-weight: 300;
 }
 
 .custom-counter {
@@ -52,6 +53,93 @@ body {
   position: absolute;
   left: -5rem;
   top: -2.25rem;
-  color: rgb(204, 204, 204);
+  color: rgb(188, 231, 236);
 }
 
+#hero,
+#article {
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+}
+
+#contact {
+  background: linear-gradient(0deg, #ffffff, #f4f8ff);
+}
+
+/* Effet lumineux Hero Section */
+@keyframes lightSweep {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-lightSweep {
+  animation: lightSweep 1.5s linear infinite;
+}
+
+.process-list li span {
+  animation: lightSweep 2s linear infinite;
+}
+
+/* décalage progressif */
+.process-list li:nth-child(1) span {
+  animation-delay: 0s;
+}
+.process-list li:nth-child(2) span {
+  animation-delay: 0.2s;
+}
+.process-list li:nth-child(3) span {
+  animation-delay: 0.4s;
+}
+.process-list li:nth-child(4) span {
+  animation-delay: 0.6s;
+}
+.process-list li:nth-child(5) span {
+  animation-delay: 0.8s;
+}
+
+
+.gradient-text {
+  background: linear-gradient(90deg, #004ad4, #14b9b1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.word-top,
+.word-bottom {
+  display: block;
+  transition: transform 0.35s ease;
+  white-space: nowrap;
+}
+
+.word-bottom {
+  top: 100%;
+  position: absolute;
+}
+
+.group:hover .word-top {
+  transform: translateY(-100%);
+}
+
+.group:hover .word-bottom {
+  transform: translateY(-100%);
+}
+
+.carousel {
+  @apply flex transition-transform duration-700;
+}
+
+.slide-0 {
+  transform: translateX(0);
+}
+
+.slide-1 {
+  transform: translateX(-100%);
+}
+
+.slide-2 {
+  transform: translateX(-200%);
+}

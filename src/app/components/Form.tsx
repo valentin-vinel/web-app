@@ -9,24 +9,24 @@ export default function Form() {
     return (
         <form 
             // onSubmit={handleSubmit} 
-            className="flex flex-col gap-4 max-w-[800px] m-auto mb-6" 
+            className="flex flex-col gap-4 max-w-[800px] mb-6" 
             action="mailto:contact@valentin-vinel.fr"
             method="POST"
             encType="text/plain"
         >
-            <div className="flex gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="text"
                 name="firstName"
                 placeholder="Prénom"
-                className="border p-2 flex-1 rounded"
+                className="border border-blue-700 p-2 flex-1 rounded"
                 required
               />
               <input
                 type="text"
                 name="lastName"
                 placeholder="Nom"
-                className="border p-2 flex-1 rounded"
+                className="border border-blue-700 p-2 flex-1 rounded"
                 required
               />
             </div>
@@ -36,7 +36,7 @@ export default function Form() {
               type="email"
               name="email"
               placeholder="Email"
-              className="border p-2 rounded"
+              className="border border-blue-700 p-2 rounded"
               required
             />
 
@@ -44,7 +44,7 @@ export default function Form() {
             <textarea
               name="message"
               placeholder="Message"
-              className="border p-2 rounded"
+              className="border border-blue-700 p-2 rounded mb-4"
               rows={4}
               required
             ></textarea>
@@ -52,9 +52,12 @@ export default function Form() {
 
             <button
               type="submit"
-              className="bg-black text-white p-2 rounded w-80 mx-auto cursor-pointer"
+              className="relative overflow-hidden group flex items-center justify-center border border-sky-700 text-sky-700 rounded w-60 md:w-80 mx-auto cursor-pointer "
             >
-              Envoyer ma demande
+              <span className="word-top">Envoyer ma demande</span>
+              <span className="word-bottom absolute left-1/2 -translate-x-1/2">
+                Envoyer ma demande
+              </span>
             </button>
           </form>
     )

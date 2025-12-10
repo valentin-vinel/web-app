@@ -3,8 +3,8 @@ import graphImg from "../../../public/28564.jpg"
 
 export default function ResultsSection() {
     return (
-        <section id="results" className="text-center mb-[100px]">
-          <h3 className="font-bold text-3xl mb-2">Des indicateurs concrets pour piloter votre croissance.</h3>
+        <section id="results" className="text-center h-[800px] flex flex-col justify-center items-center">
+          <h3 className="text-4xl mb-2">Des indicateurs concrets pour <span className="font-semibold gradient-text">piloter votre croissance.</span></h3>
           <p className="mb-8 text-sm">Chaque site que je crée est conçu pour générer plus de trafic, capturer davantage de leads et fournir des données claires pour piloter votre croissance.</p>
           <div className="flex gap-16 justify-center items-center">
             <Image src={graphImg} alt="Image de graphique" className="max-w-[450px] rounded-xl" />
